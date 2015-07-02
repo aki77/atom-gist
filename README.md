@@ -1,6 +1,7 @@
 # gist package
 
 create and insert Gists.
+[![Build Status](https://travis-ci.org/aki77/atom-gist.svg)](https://travis-ci.org/aki77/atom-gist)
 
 [![Gyazo](http://i.gyazo.com/439abb8882115eb5209d67c94c4f6f26.gif)](http://gyazo.com/439abb8882115eb5209d67c94c4f6f26)
 
