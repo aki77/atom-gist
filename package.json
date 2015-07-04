@@ -21,14 +21,13 @@
   },
   "dependencies": {
     "@aki77/atom-input-dialog": "^0.1.3",
-    "@aki77/atom-select-action": "^0.1.0",
+    "@aki77/atom-select-action": "^0.1.2",
     "atom-space-pen-views": "^2.0.5",
+    "bluebird": "^2.9.31",
     "fuzzaldrin": "^2.1.0",
     "octonode": "^0.6.18",
+    "temp": "~0.8.1",
     "underscore-plus": "^1.6.6",
     "untildify": "^2.1.0"
-  },
-  "devDependencies": {
-    "temp": "~0.8.1"
   }
 }

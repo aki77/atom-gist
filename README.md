@@ -7,13 +7,18 @@ create and insert Gists.
 
 Inspired by [condemil/Gist](https://github.com/condemil/Gist)
 
+## Features
+
+* Create Gists
+* Insert Gists
+* Edit existing Gists
+* Delete existing Gists
+* Open browser existing Gists
+
 ## Commands
 
 * `gist:create-public`
 * `gist:create-private`
-
-If you don't have anything selected, a Gist will be created with contents of current file, URL of that Gist will be copied to the clipboard.
-
 * `gist:list`
 
 ## Keymap
@@ -37,9 +42,31 @@ edit `~/.atom/keymap.cson`
 
 ## Usage
 
+### Create Gists
+
+1. Use the `gist:create-private` or `gist:create-public` commands.
+
+ If you don't have anything selected, a Gist will be created with contents of current file, URL of that Gist will be copied to the clipboard.
+
+### Edit Gists
+
+1. Use the `gist:list` commands.
+2. Select gist.
+3. Press the `tab` key.
+4. Select `Edit` action.
+
+### Delete Gists
+
+1. Use the `gist:list` commands.
+2. Select gist.
+3. Press the `tab` key.
+4. Select `Delete` action.
+
+
 ![](http://g.recordit.co/5ZqgyxgjdB.gif)
 
 ## TODO
 
-- [ ] Editing existing Gists
+- [x] Editing existing Gists
 - [ ] Adding new files to existing Gists
+- [ ] Caching Gists

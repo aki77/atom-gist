@@ -1,4 +1,5 @@
 github = require 'octonode'
+Promise = require 'bluebird'
 
 module.exports =
 class GistClient
@@ -16,6 +17,9 @@ class GistClient
 
   get: (id) ->
     @request('get', id)
+
+  edit: (id, gist) ->
+    @request('edit', id, gist)
 
   delete: (id) ->
     @client.delete(id)
