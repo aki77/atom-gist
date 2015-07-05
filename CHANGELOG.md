@@ -1,3 +1,6 @@
+## 0.2.2
+* Add environmentName settings
+
 ## 0.2.1
 * Fix delete action
 

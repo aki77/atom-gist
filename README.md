@@ -3,7 +3,7 @@
 create and insert Gists.
 [![Build Status](https://travis-ci.org/aki77/atom-gist.svg)](https://travis-ci.org/aki77/atom-gist)
 
-[![Gyazo](http://i.gyazo.com/439abb8882115eb5209d67c94c4f6f26.gif)](http://gyazo.com/439abb8882115eb5209d67c94c4f6f26)
+![](http://g.recordit.co/5ZqgyxgjdB.gif)
 
 Inspired by [condemil/Gist](https://github.com/condemil/Gist)
 
@@ -35,8 +35,9 @@ edit `~/.atom/keymap.cson`
 
 * `token` (default: '')
 * `tokenFile` (default: '~/.atom/gist.token')
+* `environmentName` (default: 'GIST_ACCESS_TOKEN')
 
-[![Gyazo](http://i.gyazo.com/2571230928167c8f01b5a195920009cb.png)](http://gyazo.com/2571230928167c8f01b5a195920009cb)
+[![Gyazo](http://i.gyazo.com/b68171e09b21dc06a1d50b4635b655fe.png)](http://gyazo.com/b68171e09b21dc06a1d50b4635b655fe)
 
 [Personal Access Tokens](https://github.com/settings/tokens)
 
@@ -67,9 +68,6 @@ edit `~/.atom/keymap.cson`
 2. Select gist.
 3. Press the `tab` key.
 4. Select `Delete` action.
-
-
-![](http://g.recordit.co/5ZqgyxgjdB.gif)
 
 ## TODO
 

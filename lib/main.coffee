@@ -20,6 +20,11 @@ module.exports = AtomGist =
       type: 'string'
       default: '~/.atom/gist.token'
       description: 'not save the token to the configuration file'
+    environmentName:
+      order: 3
+      type: 'string'
+      default: 'GIST_ACCESS_TOKEN'
+      description: 'not save the token to the configuration file'
 
   activate: (state) ->
     @subscriptions = new CompositeDisposable
@@ -82,15 +87,16 @@ module.exports = AtomGist =
     )
 
   getToken: ->
-    token = atom.config.get('gist.token')
-    tokenFile = atom.config.get('gist.tokenFile')
+    environmentName = atom.config.get('gist.environmentName')
+    return process.env[environmentName] if process.env[environmentName]?
 
-    if token.length is 0 and tokenFile.length > 0
+    tokenFile = atom.config.get('gist.tokenFile')
+    if tokenFile.length > 0
       tokenFile = untildify(tokenFile)
       if fs.existsSync(tokenFile)
-        token = fs.readFileSync(tokenFile, encoding: 'utf8')?.trim()
+        return token = fs.readFileSync(tokenFile, encoding: 'utf8')?.trim()
 
-    token
+    atom.config.get('gist.token')
 
   getListView: ->
     GistListView ?= require './gist-list-view'

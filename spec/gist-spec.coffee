@@ -13,6 +13,7 @@ describe "Gist", ->
 
     atom.config.set('gist.token', '')
     atom.config.set('gist.tokenFile', '')
+    atom.config.set('gist.environmentName', 'GIST_ACCESS_TOKEN')
 
     waitsForPromise ->
       atom.workspace.open().then((_editor) ->
@@ -21,9 +22,11 @@ describe "Gist", ->
       )
 
   describe "getToken", ->
-    it "gist.token", ->
+    beforeEach ->
       expect(gistPackage.getToken()).toEqual('')
       atom.config.set('gist.token', 'abc')
+
+    it "gist.token", ->
       expect(gistPackage.getToken()).toEqual('abc')
 
     it "gist.tokenFile", ->
@@ -31,6 +34,11 @@ describe "Gist", ->
       tokenFile = path.join(directory, 'gist.token')
       fs.writeFileSync(tokenFile, '123')
 
-      expect(gistPackage.getToken()).toEqual('')
+      expect(gistPackage.getToken()).toEqual('abc')
       atom.config.set('gist.tokenFile', tokenFile)
       expect(gistPackage.getToken()).toEqual('123')
+
+    it "gist.environmentName", ->
+      expect(gistPackage.getToken()).toEqual('abc')
+      process.env[atom.config.get('gist.environmentName')] = 'foo'
+      expect(gistPackage.getToken()).toEqual('foo')
