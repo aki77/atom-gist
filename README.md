@@ -48,6 +48,12 @@ edit `~/.atom/keymap.cson`
 
  If you don't have anything selected, a Gist will be created with contents of current file, URL of that Gist will be copied to the clipboard.
 
+### Insert Gists
+
+1. Use the `gist:list` commands.
+2. Select gist.
+3. Press the `enter` key.
+
 ### Edit Gists
 
 1. Use the `gist:list` commands.
