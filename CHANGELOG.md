@@ -1,3 +1,6 @@
+## 0.2.1
+* Fix delete action
+
 ## 0.2.0
 * Add edit action
 

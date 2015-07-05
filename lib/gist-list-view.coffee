@@ -69,9 +69,9 @@ class GistListView extends ActionSelectListView
     ).catch(@showError)
 
   delete: ({id}) =>
-    @client.delete(id)
-    # TODO: check result
-    atom.notifications.addSuccess('Gist deleted')
+    @client.delete(id).then( ->
+      atom.notifications.addSuccess('Gist deleted')
+    ).catch(@showError)
 
   edit: ({id}) =>
     Promise.all([mkdirAsync('atom-gist'), @client.get(id)]).then(([diaPath, {files}]) ->

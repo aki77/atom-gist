@@ -22,7 +22,7 @@ class GistClient
     @request('edit', id, gist)
 
   delete: (id) ->
-    @client.delete(id)
+    @request('delete', id)
 
   request: (method, params...) ->
     new Promise((resolve, reject) =>
