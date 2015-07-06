@@ -1,3 +1,6 @@
+## 0.2.3
+* octonode@0.7.1
+
 ## 0.2.2
 * Add environmentName settings
 
