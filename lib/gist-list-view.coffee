@@ -11,6 +11,7 @@ ActionSelectListView = require '@aki77/atom-select-action'
 
 module.exports =
 class GistListView extends ActionSelectListView
+  allowedTypes = ['text', 'application']
   client: null
 
   constructor: (@client) ->
@@ -65,7 +66,7 @@ class GistListView extends ActionSelectListView
       return unless editor
 
       for filename, {content, type} of files
-        editor.insertText(content) if type.startsWith('text/')
+        editor.insertText(content) if type.split('/')[0] in allowedTypes
     ).catch(@showError)
 
   delete: ({id}) =>
