@@ -25,7 +25,12 @@ module.exports = AtomGist =
       type: 'string'
       default: 'GIST_ACCESS_TOKEN'
       description: 'not save the token to the configuration file'
-
+    closeOnSave:
+      order: 4
+      type: 'boolean'
+      default: false
+      description: 'close the tab when you save a gist'
+      
   activate: (state) ->
     @subscriptions = new CompositeDisposable
 

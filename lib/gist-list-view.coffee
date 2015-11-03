@@ -120,7 +120,8 @@ class GistListView extends ActionSelectListView
     @client.edit(id, {files}).then((gist) ->
       atom.notifications.addSuccess(message)
     ).finally( ->
-      atom.workspace.paneForItem(editor)?.destroyItem(editor)
+      if atom.config.get('gist.closeOnSave')
+        atom.workspace.paneForItem(editor)?.destroyItem(editor)
     )
 
   cleanupGistFile: (editor) ->
