@@ -3,13 +3,12 @@ path = require 'path'
 temp = require 'temp'
 
 describe "Gist", ->
-  [activationPromise, gistPackage, editor, editorElement] = []
+  [gistPackage, editor, editorElement] = []
 
   beforeEach ->
     pack = atom.packages.loadPackage('gist')
     pack.activateConfig()
     gistPackage = pack.mainModule
-    activationPromise = atom.packages.activatePackage('gist')
 
     atom.config.set('gist.token', '')
     atom.config.set('gist.tokenFile', '')
