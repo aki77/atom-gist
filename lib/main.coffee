@@ -30,14 +30,14 @@ module.exports = AtomGist =
       type: 'boolean'
       default: false
       description: 'close the tab when you save a gist'
-      
+
   activate: (state) ->
     @subscriptions = new CompositeDisposable
 
     @subscriptions.add(atom.commands.add('atom-text-editor:not([mini])',
-      'gist:create-public': ({target}) => @create(target.getModel(), true)
-      'gist:create-private': ({target}) => @create(target.getModel())
-      'gist:list': ({target}) => @list(target.getModel())
+      'gist:create-public': ({currentTarget}) => @create(currentTarget.getModel(), true)
+      'gist:create-private': ({currentTarget}) => @create(currentTarget.getModel())
+      'gist:list': ({currentTarget}) => @list(currentTarget.getModel())
     ))
 
     @subscriptions.add(atom.config.onDidChange('gist', =>
