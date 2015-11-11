@@ -30,6 +30,10 @@ module.exports = AtomGist =
       type: 'boolean'
       default: false
       description: 'close the tab when you save a gist'
+    debug:
+      order: 99
+      type: 'boolean'
+      default: false
 
   activate: (state) ->
     @subscriptions = new CompositeDisposable
@@ -109,7 +113,10 @@ module.exports = AtomGist =
 
   getClient: ->
     GistClient ?= require './gist-client'
-    @client ?= new GistClient(@getToken())
+    unless @client?
+      @client = new GistClient(@getToken())
+      console.log "gist token: #{@client.token}" if atom.config.get('gist.debug')
+    @client
 
   resetInstance: ->
     @client?.destroy()

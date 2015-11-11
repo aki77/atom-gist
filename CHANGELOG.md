@@ -1,3 +1,6 @@
+## 0.2.8
+* Add debug settings(#6)
+
 ## 0.2.7
 * Fix #5
 
