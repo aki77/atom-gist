@@ -1,3 +1,6 @@
+## 0.2.9
+bluebird@3.1.1
+
 ## 0.2.8
 * Add debug settings(#6)
 
