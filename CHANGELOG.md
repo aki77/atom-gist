@@ -1,5 +1,9 @@
+## 0.3.0
+* bluebird@3.1.4
+* Update engines
+
 ## 0.2.9
-bluebird@3.1.1
+* bluebird@3.1.1
 
 ## 0.2.8
 * Add debug settings(#6)
