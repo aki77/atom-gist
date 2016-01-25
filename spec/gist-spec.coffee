@@ -8,6 +8,7 @@ describe "Gist", ->
   beforeEach ->
     pack = atom.packages.loadPackage('gist')
     pack.activateConfig()
+    pack.requireMainModule()
     gistPackage = pack.mainModule
 
     atom.config.set('gist.token', '')
