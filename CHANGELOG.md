@@ -1,3 +1,6 @@
+## 0.3.1
+* Move config schema to package.json
+
 ## 0.3.0
 * bluebird@3.1.4
 * Update engines

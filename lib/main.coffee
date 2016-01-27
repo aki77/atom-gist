@@ -9,32 +9,6 @@ module.exports = AtomGist =
   subscriptions: null
   client: null
 
-  config:
-    token:
-      order: 1
-      type: 'string'
-      default: ''
-      description: 'github personal access token'
-    tokenFile:
-      order: 2
-      type: 'string'
-      default: '~/.atom/gist.token'
-      description: 'not save the token to the configuration file'
-    environmentName:
-      order: 3
-      type: 'string'
-      default: 'GIST_ACCESS_TOKEN'
-      description: 'not save the token to the configuration file'
-    closeOnSave:
-      order: 4
-      type: 'boolean'
-      default: false
-      description: 'close the tab when you save a gist'
-    debug:
-      order: 99
-      type: 'boolean'
-      default: false
-
   activate: (state) ->
     @subscriptions = new CompositeDisposable
 
