@@ -40,6 +40,13 @@ class GistListView extends ActionSelectListView
 
   getItems: =>
     @client.list().then((gists) ->
+      gists.sort( (a, b) ->
+        if Object.keys(a.files)[0] < Object.keys(b.files)[0]
+            return -1
+        if Object.keys(a.files)[0] > Object.keys(b.files)[0]
+            return 1
+        return 0
+      )
       gists.map(({id, description, files, html_url}) ->
         {
           id, description, files, html_url,
