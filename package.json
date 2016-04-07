@@ -49,8 +49,13 @@
       "default": "GIST_ACCESS_TOKEN",
       "description": "not save the token to the configuration file"
     },
-    "closeOnSave": {
+    "maxGistsCount": {
       "order": 4,
+      "type": "integer",
+      "default": 100
+    },
+    "closeOnSave": {
+      "order": 5,
       "type": "boolean",
       "default": false,
       "description": "close the tab when you save a gist"
