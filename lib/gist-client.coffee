@@ -4,8 +4,8 @@ Promise = require 'bluebird'
 module.exports =
 class GistClient
 
-  constructor: (@token) ->
-    @client = github.client(@token).gist()
+  constructor: (@token, @hostname) ->
+    @client = github.client(@token, {"hostname": @hostname}).gist()
 
   destroy: ->
 

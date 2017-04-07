@@ -81,6 +81,15 @@ module.exports = AtomGist =
 
     atom.config.get('gist.token')
 
+  getHostname: ->
+    hostnameFile = atom.config.get('gist.hostnameFile')
+    if hostnameFile.length > 0
+      hostnameFile = untildify(hostnameFile)
+      if fs.existsSync(hostnameFile)
+        return hostname = fs.readFileSync(hostnameFile, encoding: 'utf8')?.trim()
+
+    atom.config.get('gist.hostname')
+
   getListView: ->
     GistListView ?= require './gist-list-view'
     @view ?= new GistListView(@getClient())
@@ -88,8 +97,9 @@ module.exports = AtomGist =
   getClient: ->
     GistClient ?= require './gist-client'
     unless @client?
-      @client = new GistClient(@getToken())
+      @client = new GistClient(@getToken(), @getHostname())
       console.log "gist token: #{@client.token}" if atom.config.get('gist.debug')
+      console.log "gist hostname: #{@client.hostname}" if atom.config.get('gist.debug')
     @client
 
   resetInstance: ->

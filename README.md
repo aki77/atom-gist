@@ -33,13 +33,18 @@ edit `~/.atom/keymap.cson`
 
 ## Settings
 
+### [Personal Access Tokens](https://github.com/settings/tokens)
+
 * `token` (default: '')
 * `tokenFile` (default: '~/.atom/gist.token')
 * `environmentName` (default: 'GIST_ACCESS_TOKEN')
 
 [![Gyazo](http://i.gyazo.com/b68171e09b21dc06a1d50b4635b655fe.png)](http://gyazo.com/b68171e09b21dc06a1d50b4635b655fe)
 
-[Personal Access Tokens](https://github.com/settings/tokens)
+### Custom Hostname for [GitHub Enterprise](https://enterprise.github.com/features)
+
+* `hostname` (default: 'github.com/api/v3')
+* `hostnameFile` (default: '~/.atom/gist.hostname')
 
 ## Usage
 

@@ -55,6 +55,18 @@
       "default": false,
       "description": "close the tab when you save a gist"
     },
+    "hostname": {
+      "order": 5,
+      "type": "string",
+      "default": "github.com/api/v3",
+      "description": "GitHub or GitHub Enterprise hostname"
+    },
+    "hostnameFile": {
+      "order": 6,
+      "type": "string",
+      "default": "~/.atom/gist.hostname",
+      "description": "not save the token to the configuration file"
+    },
     "debug": {
       "order": 99,
       "type": "boolean",
