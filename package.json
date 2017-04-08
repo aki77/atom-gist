@@ -59,7 +59,7 @@
       "order": 5,
       "type": "string",
       "default": "api.github.com",
-      "description": "api endpoint, like api.github.com or myghe.com/api/v3"
+      "description": "api endpoint, like api.github.com or githubenterprise/api/v3"
     },
     "debug": {
       "order": 99,
