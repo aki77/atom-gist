@@ -28,7 +28,7 @@
     "octonode": "^0.7.1",
     "temp": "~0.8.1",
     "underscore-plus": "^1.6.6",
-    "untildify": "^2.1.0"
+    "untildify": "^3.0.2"
   },
   "configSchema": {
     "token": {
