@@ -82,12 +82,6 @@ module.exports = AtomGist =
     atom.config.get('gist.token')
 
   getHostname: ->
-    hostnameFile = atom.config.get('gist.hostnameFile')
-    if hostnameFile.length > 0
-      hostnameFile = untildify(hostnameFile)
-      if fs.existsSync(hostnameFile)
-        return hostname = fs.readFileSync(hostnameFile, encoding: 'utf8')?.trim()
-
     atom.config.get('gist.hostname')
 
   getListView: ->

@@ -43,8 +43,7 @@ edit `~/.atom/keymap.cson`
 
 ### Custom Hostname for [GitHub Enterprise](https://enterprise.github.com/features)
 
-* `hostname` (default: 'github.com/api/v3')
-* `hostnameFile` (default: '~/.atom/gist.hostname')
+* `hostname` (default: 'api.github.com')
 
 ## Usage
 

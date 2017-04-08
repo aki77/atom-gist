@@ -58,14 +58,8 @@
     "hostname": {
       "order": 5,
       "type": "string",
-      "default": "github.com/api/v3",
-      "description": "GitHub or GitHub Enterprise hostname"
-    },
-    "hostnameFile": {
-      "order": 6,
-      "type": "string",
-      "default": "~/.atom/gist.hostname",
-      "description": "not save the token to the configuration file"
+      "default": "api.github.com",
+      "description": "api endpoint, like api.github.com or myghe.com/api/v3"
     },
     "debug": {
       "order": 99,
