@@ -14,6 +14,7 @@ describe "Gist", ->
     atom.config.set('gist.token', '')
     atom.config.set('gist.tokenFile', '')
     atom.config.set('gist.environmentName', 'GIST_ACCESS_TOKEN')
+    atom.config.set('gist.hostname', '')
 
     waitsForPromise ->
       atom.workspace.open().then((_editor) ->
@@ -42,3 +43,11 @@ describe "Gist", ->
       expect(gistPackage.getToken()).toEqual('abc')
       process.env[atom.config.get('gist.environmentName')] = 'foo'
       expect(gistPackage.getToken()).toEqual('foo')
+
+  describe "getHostname", ->
+    beforeEach ->
+      expect(gistPackage.getHostname()).toEqual('')
+      atom.config.set('gist.hostname', 'abc')
+
+    it "gist.hostname", ->
+      expect(gistPackage.getHostname()).toEqual('abc')
