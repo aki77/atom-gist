@@ -1,7 +1,7 @@
 {
   "name": "gist",
   "main": "./lib/main",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "description": "create and insert Gists.",
   "keywords": [
     "github",
