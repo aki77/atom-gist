@@ -5,7 +5,7 @@ module.exports =
 class GistClient
 
   constructor: (@token, @hostname) ->
-    @client = github.client(@token, {"hostname": "#{@hostname}"}).gist()
+    @client = github.client(@token, {@hostname}).gist()
 
   destroy: ->
 

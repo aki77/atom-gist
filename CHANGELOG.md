@@ -1,3 +1,6 @@
+## 0.4.0
+* Add support for GitHub Enterprise (@solvaholic)
+
 ## 0.3.1
 * Move config schema to package.json
 

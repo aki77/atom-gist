@@ -2,7 +2,7 @@ fs = require 'fs'
 path = require 'path'
 temp = require 'temp'
 
-describe "Gist", ->
+describe 'Gist', ->
   [gistPackage, editor, editorElement] = []
 
   beforeEach ->
@@ -22,15 +22,15 @@ describe "Gist", ->
         editorElement = atom.views.getView(editor)
       )
 
-  describe "getToken", ->
+  describe 'getToken', ->
     beforeEach ->
       expect(gistPackage.getToken()).toEqual('')
       atom.config.set('gist.token', 'abc')
 
-    it "gist.token", ->
+    it 'gist.token', ->
       expect(gistPackage.getToken()).toEqual('abc')
 
-    it "gist.tokenFile", ->
+    it 'gist.tokenFile', ->
       directory = temp.mkdirSync('atom-gist')
       tokenFile = path.join(directory, 'gist.token')
       fs.writeFileSync(tokenFile, '123')
@@ -39,15 +39,15 @@ describe "Gist", ->
       atom.config.set('gist.tokenFile', tokenFile)
       expect(gistPackage.getToken()).toEqual('123')
 
-    it "gist.environmentName", ->
+    it 'gist.environmentName', ->
       expect(gistPackage.getToken()).toEqual('abc')
       process.env[atom.config.get('gist.environmentName')] = 'foo'
       expect(gistPackage.getToken()).toEqual('foo')
 
-  describe "getHostname", ->
+  describe 'getHostname', ->
     beforeEach ->
       expect(gistPackage.getHostname()).toEqual('')
       atom.config.set('gist.hostname', 'abc')
 
-    it "gist.hostname", ->
+    it 'gist.hostname', ->
       expect(gistPackage.getHostname()).toEqual('abc')
