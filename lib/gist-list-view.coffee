@@ -86,9 +86,15 @@ class GistListView extends ActionSelectListView
     ).then((filePaths) ->
       promiseArray = for filePath in filePaths
         atom.workspace.open(filePath).then((editor) ->
+          return editor unless atom.config.get('tabs.usePreviewTabs')
+
           # clear preview tab
-          editor.save() if atom.config.get('tabs.usePreviewTabs')
-          editor
+          new Promise((resolve) ->
+            editor.onDidSave( ->
+              resolve(editor)
+            )
+            editor.save()
+          )
         )
       Promise.all(promiseArray)
     ).then((editors) =>

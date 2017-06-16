@@ -1,3 +1,6 @@
+## 1.0.0
+* Support for Atom 1.19 (#28)
+
 ## 0.4.0
 * Add support for GitHub Enterprise (@solvaholic)
 
