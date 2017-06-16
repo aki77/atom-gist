@@ -37,13 +37,13 @@ module.exports = AtomGist =
     filename = editor.getTitle()
 
     @showDialog(
-      prompt: 'filename'
+      labelText: 'filename'
       defaultText: filename
       selectedRange: [[0, 0], [0, filename.lastIndexOf('.')]]
     ).then((_filename) =>
       filename = _filename
       @showDialog(
-        prompt: 'A description of the gist.'
+        labelText: 'A description of the gist.'
         validate: ->
       )
     ).then((description) =>
