@@ -13,7 +13,7 @@ class GistClient
     @request('create', gist)
 
   list: (params...) ->
-    @request('list', params...)
+    @request('list', 1, 100, params...)
 
   get: (id) ->
     @request('get', id)
