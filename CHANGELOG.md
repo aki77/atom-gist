@@ -1,3 +1,6 @@
+## 1.1.0
+* List first 100 Gists for user (@solvaholic)
+
 ## 1.0.0
 * Support for Atom 1.19 (#28)
 
