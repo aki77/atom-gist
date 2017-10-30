@@ -1,3 +1,6 @@
+## 1.1.0
+* Get me some conflicting edits! (@solvaholic)
+
 ## 1.0.0
 * Support for Atom 1.19 (#28)
 
